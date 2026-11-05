@@ -79,7 +79,3 @@ const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value
 }
 </script>
-
-<style>
-@import './styles.css';
-</style>
