@@ -27,7 +27,7 @@
         ABOUT
       </RouterLink>
 
-      <RouterLink to="/certification" class="box">
+      <RouterLink to="/certificates" class="box">
         CERTIFICATIONS
       </RouterLink>
 

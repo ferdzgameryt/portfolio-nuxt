@@ -18,9 +18,7 @@
         </li>
 
         <li class="nav-item">
-          <a href="/certification" class="nav-link">
-            Certifications
-          </a>
+          <a href="/certificates" class="nav-link">Certifications</a>
         </li>
       </ul>
 
