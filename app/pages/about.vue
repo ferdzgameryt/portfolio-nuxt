@@ -4,21 +4,29 @@
     <nav class="navbar">
       <h1 class="logo">JFA</h1>
 
-      <ul class="nav-menu">
+      <ul class="nav-menu" :class="{ active: isMenuOpen }">
         <li class="nav-item">
-          <a href="/" class="nav-link">Home</a>
+          <NuxtLink to="/" class="nav-link" @click="closeMenu">
+            Home
+          </NuxtLink>
         </li>
 
         <li class="nav-item">
-          <a href="/about" class="nav-link">About</a>
+          <NuxtLink to="/about" class="nav-link" @click="closeMenu">
+            About
+          </NuxtLink>
         </li>
 
         <li class="nav-item">
-          <a href="/tech-stack" class="nav-link">Tech Stack</a>
+          <NuxtLink to="/tech-stack" class="nav-link" @click="closeMenu">
+            Tech Stack
+          </NuxtLink>
         </li>
 
         <li class="nav-item">
-          <a href="/certificates" class="nav-link">Certifications</a>
+          <NuxtLink to="/certificates" class="nav-link" @click="closeMenu">
+            Certifications
+          </NuxtLink>
         </li>
       </ul>
 
@@ -35,7 +43,7 @@
   </header>
 
   <div class="container2">
-    <h1>About Me</h1>
+    <h1 class="page-title">About Me</h1>
 
     <div class="about-page">
       <div class="about-text">
@@ -75,5 +83,9 @@ const isMenuOpen = ref(false)
 
 const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value
+}
+
+const closeMenu = () => {
+  isMenuOpen.value = false
 }
 </script>

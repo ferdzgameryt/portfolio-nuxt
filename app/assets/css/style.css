@@ -1,3 +1,4 @@
+@import "tailwindcss";
 body {
     margin: 0;
     padding: 0;
@@ -101,9 +102,20 @@ a{
     transform: scale(1.1);
 }
 
-.info{
-    font-size: 25px;
+.info {
     font-family: "Cormorant Garamond", serif;
+    font-size: 25px;
+}
+
+.info h1 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.info p {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 25px;
 }
 
 .bottom{
@@ -157,11 +169,23 @@ a{
     transition: 0.3s;
 }
 
+.page-title {
+    font-size: 40px;
+    margin: 0 0 25px 0;
+    text-align: center;
+    font-family: "Archivo Black", sans-serif;
+}
+
 .container2{
     max-width: 1000px;
     margin: auto;
     padding: 20px;
     text-align: center;
+}
+
+.container2 h1{
+    font-size: 40px;
+    margin-bottom: 25px;
 }
 
 /* TECH STACK */
@@ -173,7 +197,7 @@ a{
     gap: 20px;
 }
 
-.card{
+.card {
     flex: 1 1 200px;
     max-width: 220px;
     padding: 20px;
@@ -182,12 +206,20 @@ a{
     background: rgba(255,255,255,0.08);
     transition: 0.3s;
     text-align: center;
+
+    /* Add these */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.card img{
+.card img {
     width: 120px;
     height: 120px;
     object-fit: contain;
+    display: block;
+    margin: 0 auto;
 }
 
 .card:hover{
@@ -210,7 +242,7 @@ a{
 
 /* MOBILE */
 
-@media(max-width:768px){
+@media(max-width:900px){
 
     /*hamburger*/
     .hamburger{
@@ -273,22 +305,21 @@ a{
         height: 180px;
     }
 
-    .info{
-        font-size: 18px;
-    }
 
     .info h1{
         line-height: 1.1;
         margin-bottom: 10px;
     }
 
-    .bottom{
-        margin-top: 40px;
+    .bottom {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px;
     }
 
-    .box{
-        padding: 20px;
-        font-size: 16px;
+    .box {
+        width: 100%;
+        flex: 1 1 auto;
     }
 
     /*TechStack*/
