@@ -1,3 +1,42 @@
+<script setup>
+import { ref } from 'vue'
+
+// Hamburger Menu
+const isMenuOpen = ref(false)
+
+const toggleMenu = () => {
+  isMenuOpen.value = !isMenuOpen.value
+}
+
+const closeMenu = () => {
+  isMenuOpen.value = false
+}
+
+const url = useRequestURL()
+
+
+const title = 'Home | Jan Ferdie Almario'
+const description =
+  'Explore the personal portfolio of Jan Ferdie Almario, featuring his background, technical skills, and certifications as a Bachelor of Science in Information Technology student.'
+
+
+useHead({
+  title,
+  link: [{ rel: 'canonical', href: url.href }],
+})
+
+
+useSeoMeta({
+  description,
+  ogTitle: title,
+  ogDescription: description,
+  ogType: 'website',
+  ogUrl: url.href,
+  ogImage: `${url.origin}/img/myface.jpg`, 
+  ogImageAlt: 'Jan Ferdie Almario personal portfolio website preview',
+})
+</script>
+
 <template>
   <div class="home-page">
 
@@ -78,18 +117,3 @@
     </div>
   </div>
 </template>
-
-<script setup>
-import { ref } from 'vue'
-
-// Hamburger Menu
-const isMenuOpen = ref(false)
-
-const toggleMenu = () => {
-  isMenuOpen.value = !isMenuOpen.value
-}
-
-const closeMenu = () => {
-  isMenuOpen.value = false
-}
-</script>

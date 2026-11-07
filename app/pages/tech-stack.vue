@@ -1,4 +1,40 @@
+<script setup>
+import { ref } from 'vue'
 
+// Hamburger Menu
+const isMenuOpen = ref(false)
+
+const toggleMenu = () => {
+  isMenuOpen.value = !isMenuOpen.value
+}
+
+// Close Menu When a Navigation Link is Clicked
+const closeMenu = () => {
+  isMenuOpen.value = false
+}
+  const url = useRequestURL()
+
+
+const title = 'Tech Stack | Jan Ferdie Almario'
+const description =
+  'Explore the programming languages, development tools, and technologies that Jan Ferdie Almario uses and continues to learn as a BSIT student.'
+
+
+useHead({
+  title,
+  link: [{ rel: 'canonical', href: url.href }],
+})
+
+
+useSeoMeta({
+  description,
+  ogTitle: title,
+  ogDescription: description,
+  ogType: 'website',
+  ogUrl: url.href,
+})
+
+</script>
 <template>
   <div>
     <!-- Navigation Bar -->
@@ -107,18 +143,3 @@
   </div>
 </template>
 
-<script setup>
-import { ref } from 'vue'
-
-// Hamburger Menu
-const isMenuOpen = ref(false)
-
-const toggleMenu = () => {
-  isMenuOpen.value = !isMenuOpen.value
-}
-
-// Close Menu When a Navigation Link is Clicked
-const closeMenu = () => {
-  isMenuOpen.value = false
-}
-</script>

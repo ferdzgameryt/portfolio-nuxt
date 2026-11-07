@@ -1,3 +1,38 @@
+<script setup>
+import { ref } from 'vue'
+
+const isMenuOpen = ref(false)
+
+const toggleMenu = () => {
+  isMenuOpen.value = !isMenuOpen.value
+}
+
+const closeMenu = () => {
+  isMenuOpen.value = false
+} 
+
+const url = useRequestURL()
+
+const title = 'About Me | Jan Ferdie Almario'
+const description =
+  'Learn more about Jan Ferdie Almario, a BSIT student passionate about technology, coding, gadget repair, and aspiring to become a computer technician.'
+
+
+useHead({
+  title,
+  link: [{ rel: 'canonical', href: url.href }],
+})
+
+
+useSeoMeta({
+  description,
+  ogTitle: title,
+  ogDescription: description,
+  ogType: 'website',
+  ogUrl: url.href,
+})
+
+</script>
 
 <template>
   <header>
@@ -76,16 +111,3 @@
   </div>
 </template>
 
-<script setup>
-import { ref } from 'vue'
-
-const isMenuOpen = ref(false)
-
-const toggleMenu = () => {
-  isMenuOpen.value = !isMenuOpen.value
-}
-
-const closeMenu = () => {
-  isMenuOpen.value = false
-}
-</script>
