@@ -1,4 +1,57 @@
 
+<script setup lang="ts">
+import { ref } from 'vue'
+
+// Hamburger Menu
+const isMenuOpen = ref(false)
+
+const toggleMenu = () => {
+  isMenuOpen.value = !isMenuOpen.value
+}
+
+const closeMenu = () => {
+  isMenuOpen.value = false
+}
+
+// Image Modal
+const isModalOpen = ref(false)
+const selectedImage = ref('')
+
+const openModal = (imageSrc: string) => {
+  selectedImage.value = imageSrc
+  isModalOpen.value = true
+}
+
+const closeModal = () => {
+  isModalOpen.value = false
+  selectedImage.value = ''
+}
+
+const url = useRequestURL()
+
+
+const title = 'Certifications | Jan Ferdie Almario'
+const description =
+  'Certifications earned by Jan Ferdie Almario: Word Associate, PowerPoint Associate'
+
+
+useHead({
+  title,
+  link: [{ rel: 'canonical', href: url.href }],
+})
+
+
+useSeoMeta({
+  description,
+  ogTitle: title,
+  ogDescription: description,
+  ogType: 'website',
+  ogUrl: url.href,
+  ogImage: `${url.origin}/img/powerpoint.jpg`, 
+  ogImageAlt: 'Microsoft Office Specialist Word Associate badge',
+})
+</script>
+
 <template>
   <div>
     <!-- Navigation Bar -->
@@ -130,31 +183,4 @@
   </div>
 </template>
 
-<script setup>
-import { ref } from 'vue'
 
-// Hamburger Menu
-const isMenuOpen = ref(false)
-
-const toggleMenu = () => {
-  isMenuOpen.value = !isMenuOpen.value
-}
-
-const closeMenu = () => {
-  isMenuOpen.value = false
-}
-
-// Image Modal
-const isModalOpen = ref(false)
-const selectedImage = ref('')
-
-const openModal = (imageSrc) => {
-  selectedImage.value = imageSrc
-  isModalOpen.value = true
-}
-
-const closeModal = () => {
-  isModalOpen.value = false
-  selectedImage.value = ''
-}
-</script>
