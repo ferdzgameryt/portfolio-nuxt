@@ -98,21 +98,30 @@ useSeoMeta({
         </div>
       </div>
 
-      <div class="bottom">
+<div class="bottom">
 
-        <NuxtLink to="/tech-stack" class="box">
-          TECH STACK
-        </NuxtLink>
+  <NuxtLink
+    to="/tech-stack"
+    class="btn w-80 h-26 rounded-xl border-2 border-black bg-[#00000099] text-[#f8f8f8] hover:border-white hover:bg-[#244d72] hover:shadow-[0_0_10px_white]"
+  >
+    TECH STACK
+  </NuxtLink>
 
-        <NuxtLink to="/about" class="box">
-          ABOUT
-        </NuxtLink>
+  <NuxtLink
+    to="/about"
+    class="btn w-80 h-26 rounded-xl border-2 border-black bg-[#00000099] text-[#f8f8f8] hover:border-white hover:bg-[#244d72] hover:shadow-[0_0_10px_white]"
+  >
+    ABOUT
+  </NuxtLink>
 
-        <NuxtLink to="/certificates" class="box">
-          CERTIFICATIONS
-        </NuxtLink>
+  <NuxtLink
+    to="/certificates"
+    class="btn w-80 h-26 rounded-xl border-2 border-black bg-[#00000099] text-[#f8f8f8] hover:border-white hover:bg-[#244d72] hover:shadow-[0_0_10px_white]"
+  >
+    CERTIFICATIONS
+  </NuxtLink>
 
-      </div>
+</div>
 
     </div>
   </div>

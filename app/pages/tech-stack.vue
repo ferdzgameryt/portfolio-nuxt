@@ -88,52 +88,52 @@ useSeoMeta({
 
       <div class="grid">
 
-        <div class="card">
+        <div class="tech-card">
           <img src="/img/html.png" alt="HTML">
           <p>HTML</p>
         </div>
 
-        <div class="card">
+        <div class="tech-card">
           <img src="/img/css.png" alt="CSS">
           <p>CSS</p>
         </div>
 
-        <div class="card">
+        <div class="tech-card">
           <img src="/img/git.png" alt="Git">
           <p>Git</p>
         </div>
 
-        <div class="card">
+        <div class="tech-card">
           <img src="/img/github.png" alt="GitHub">
           <p>GitHub</p>
         </div>
 
-        <div class="card">
+        <div class="tech-card">
           <img src="/img/javay.png" alt="Java">
           <p>Java</p>
         </div>
 
-        <div class="card">
+        <div class="tech-card">
           <img src="/img/android.png" alt="Android Studio">
           <p>Android Studio</p>
         </div>
 
-        <div class="card">
+        <div class="tech-card">
           <img src="/img/postgre.png" alt="PostgreSQL">
           <p>PostgreSQL</p>
         </div>
 
-        <div class="card">
+        <div class="tech-card">
           <img src="/img/c.png" alt="C">
           <p>C</p>
         </div>
 
-        <div class="card">
+        <div class="tech-card">
           <img src="/img/vs.png" alt="VS Code">
           <p>VS Code</p>
         </div>
 
-        <div class="card">
+        <div class="tech-card">
           <img src="/img/javascript.png" alt="JavaScript">
           <p>JavaScript</p>
         </div>
