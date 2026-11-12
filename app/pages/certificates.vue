@@ -104,7 +104,7 @@ useSeoMeta({
       <!-- Microsoft Word -->
       <div
         class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4 aspect-4/3 text-center
-        bg-[#061d31] rounded-lg shadow-3xl shadow-[#1E481F]
+        bg-[#061d31] rounded-lg shadow-3xl shadow-[#1e2948]
         mx-6 -mt-5 mb-18 hover:scale-105"
       >
         <img

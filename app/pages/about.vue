@@ -77,7 +77,7 @@ useSeoMeta({
     </nav>
   </header>
 
-  <div class="container2">
+  <div class="container2 about-title">
     <h1 class="page-title">About Me</h1>
   </div>
 
@@ -89,7 +89,7 @@ useSeoMeta({
                     hover:scale-[1.05]
                     transition-transform duration-300">
 
-            <div class="card-body p-4 sm:p-6 md:p-8">
+            <div class="card-body">
 
                 <p class="text-[24px] leading-relaxed text-center font-['Roboto_Slab',serif]">
                     Hi everyone! I'm Ferdz, and I'd like to share a little about myself. My full name is Jan Ferdie Almario. 
