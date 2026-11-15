@@ -2,17 +2,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
-// Hamburger Menu
-const isMenuOpen = ref(false)
-
-const toggleMenu = () => {
-  isMenuOpen.value = !isMenuOpen.value
-}
-
-const closeMenu = () => {
-  isMenuOpen.value = false
-}
-
 // Image Modal
 const isModalOpen = ref(false)
 const selectedImage = ref('')
@@ -54,44 +43,7 @@ useSeoMeta({
 
 <template>
   <div>
-    <!-- Navigation Bar -->
-    <header>
-      <nav class="navbar">
-        <h1 class="logo">JFA</h1>
-
-        <ul class="nav-menu" :class="{ active: isMenuOpen }">
-          <li class="nav-item">
-            <NuxtLink to="/" class="nav-link" @click="closeMenu">Home</NuxtLink>
-          </li>
-
-          <li class="nav-item">
-            <NuxtLink to="/about" class="nav-link" @click="closeMenu">About</NuxtLink>
-          </li>
-
-          <li class="nav-item">
-            <NuxtLink to="/tech-stack" class="nav-link" @click="closeMenu">
-              Tech Stack
-            </NuxtLink>
-          </li>
-
-          <li class="nav-item">
-            <NuxtLink to="/certificates" class="nav-link" @click="closeMenu">
-              Certifications
-            </NuxtLink>
-          </li>
-        </ul>
-
-        <div
-          class="hamburger"
-          :class="{ active: isMenuOpen }"
-          @click="toggleMenu"
-        >
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </div>
-      </nav>
-    </header>
+    <AppNavbar />
 
     <!-- Certifications Title -->
 

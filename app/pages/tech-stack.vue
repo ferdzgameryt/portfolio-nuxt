@@ -1,18 +1,5 @@
 <script setup>
-import { ref } from 'vue'
-
-// Hamburger Menu
-const isMenuOpen = ref(false)
-
-const toggleMenu = () => {
-  isMenuOpen.value = !isMenuOpen.value
-}
-
-// Close Menu When a Navigation Link is Clicked
-const closeMenu = () => {
-  isMenuOpen.value = false
-}
-  const url = useRequestURL()
+const url = useRequestURL()
 
 
 const title = 'Tech Stack | Jan Ferdie Almario'
@@ -37,49 +24,7 @@ useSeoMeta({
 </script>
 <template>
   <div>
-    <!-- Navigation Bar -->
-    <header>
-      <nav class="navbar">
-        <h1 class="logo">JFA</h1>
-
-        <ul class="nav-menu" :class="{ active: isMenuOpen }">
-          <li class="nav-item">
-            <NuxtLink to="/" class="nav-link" @click="closeMenu">
-              Home
-            </NuxtLink>
-          </li>
-
-          <li class="nav-item">
-            <NuxtLink to="/about" class="nav-link" @click="closeMenu">
-              About
-            </NuxtLink>
-          </li>
-
-          <li class="nav-item">
-            <NuxtLink to="/tech-stack" class="nav-link" @click="closeMenu">
-              Tech Stack
-            </NuxtLink>
-          </li>
-
-          <li class="nav-item">
-            <NuxtLink to="/certificates" class="nav-link" @click="closeMenu">
-              Certifications
-            </NuxtLink>
-          </li>
-        </ul>
-
-        <!-- Hamburger Menu -->
-        <div
-          class="hamburger"
-          :class="{ active: isMenuOpen }"
-          @click="toggleMenu"
-        >
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </div>
-      </nav>
-    </header>
+    <AppNavbar />
 
     <!-- Tech Stack Section -->
     <div class="container2">

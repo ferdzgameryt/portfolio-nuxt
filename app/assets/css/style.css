@@ -68,6 +68,9 @@ a{
 .hamburger{
     display: none;
     cursor: pointer;
+    border: 0;
+    padding: 0;
+    background: transparent;
 }
 
 .bar{
